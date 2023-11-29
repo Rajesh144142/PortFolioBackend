@@ -43,9 +43,10 @@ app.use(express.static('dist'));
 
 
 // --------------Database calling------------
+console.log(process.env.PORT)
 connect()
   .then((response) => {
-    app.listen(port, () => {
+    app.listen(process.env.PORT, () => {
       console.log(`Server connected to http://localhost:${process.env.PORT}`);
     });
   })

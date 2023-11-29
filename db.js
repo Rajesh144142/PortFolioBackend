@@ -3,5 +3,5 @@ const  mongoose =require( "mongoose");
     const mongoDbUrl=process.env.DB;
      mongoose.connect(mongoDbUrl)
      console.log('database is Connected')
-}
+} 
 module.exports = connect;
