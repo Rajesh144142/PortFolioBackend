@@ -3,8 +3,8 @@ const ProjectModel = require('../Models/ProjectModel')
 const createPost = async (req, res) => {
   const newProjectModel = new ProjectModel(req.body);
   try {
-    await newProjectModel.save();
-    res.status(200).json("Post created!");
+    const response=await newProjectModel.save();
+    res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error);
   }
